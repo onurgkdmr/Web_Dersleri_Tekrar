@@ -5,7 +5,7 @@ namespace Ders1_1_MVC.Controllers
 {
     public class UrunlerController : Controller
     {
-        [HttpGet] // Sayfa ilk yüklendiğinde çalışacak olan method
+        [HttpGet] // Sayfa ilk yüklendiğinde çalışacak olan method.
         public IActionResult Index() // Bu methodun görüntüsünü görmek için projeyi çalıştırdıktan sonra           http://localhost:.../urunler/Index yazmamız gerekir.
         {
             return View();
