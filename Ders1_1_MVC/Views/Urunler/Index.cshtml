@@ -1,0 +1,40 @@
+﻿<!-- 
+    Birden fazla satır
+    için yorum satırı
+-->
+
+<!-- Bu alan bir HTML kod alanıdır ve sayfa uzantısı .cshtml ile biter. 
+    cs => csharp => c# anlamına gelir.
+    html => hyper text markup language => web sayfalarının yapısını oluşturan dil
+    cshtml => c# kodları ile html kodlarının bir arada kullanıldığı dosya türüdür. MVC mimarisinde View'ların uzantısı .cshtml'dir.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ürünler</title>
+    </head>
+    <body>
+        @* @ işareti ile bir yorum satırı oluşturabiliriz. @ işaretinden sonra gelen her şey yorum olarak kabul edilir ve tarayıcı tarafından göz ardı edilir. Bu yorum satırının kapanması için yıldız(*)@ kullanılır. *@
+        <h1>Ürünler Sayfası</h1>
+        <p>Bu sayfa ürünlerin index sayfasıdır.</p>
+
+        <div>
+
+            <form method="post" action="/Urunler/Index">
+                
+            <input type="text" name="isim" placeholder="Adınızı Giriniz!" />
+
+            <input type="text" name="soyisim" placeholder="Soyadınızı Giriniz!" />
+
+            <input type="submit" value="Gönder" />
+
+            @* <button type="submit">Gönder</button> 
+
+            button ile submit aynı işlevi görüyor. O yüzden birini yorum satırı yaptık.
+            *@
+
+            </form>
+        </div>
+    </body>
+</html>

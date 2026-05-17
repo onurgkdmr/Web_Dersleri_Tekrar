@@ -1,0 +1,61 @@
+﻿@using Ders1_1_MVC.Models
+
+@model UrunModel
+
+<html lang="en">
+
+<head>
+    <title>Urun List</title>
+    <style>
+
+        label {
+            display:block;
+            margin-bottom:5px;
+            }
+
+    </style>
+</head>
+
+<body>
+    <form action="/Urunler/UrunList" method="post">
+        <div>
+            
+            <div>
+                <label>Ürün Adı</label>
+                <input type="text" name="adi" value="@Model.Adi"/>
+            </div>
+
+            <hr />
+
+            <div>
+                <label>Ürün Stok</label>
+                <input type="text" name="stok" value="@Model.Stok"/>
+            </div>
+
+            <hr />
+
+            <div>
+                <label>Ürün Fiyat</label>
+                <input type="text" name="fiyat" value="@Model.Fiyat"/>
+            </div>
+
+            <hr />
+
+            <div>
+                <input type="submit" value="Gönder" />
+            </div>
+
+        </div>
+    </form>
+    
+    <p>
+        @ViewBag.Hata
+        @TempData["eklendi"]
+        @*
+            @ Razor olarak isimlendirilir. Razor html kodları içinde c# kodları yazmak için kullanılır
+        *@
+    </p>
+   
+</body>
+
+</html>
