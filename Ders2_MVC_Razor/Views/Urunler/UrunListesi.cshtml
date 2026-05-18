@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using Ders2_MVC_Razor.Models
+
+@model List<UrunListesiModel>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UrunListesi</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container-fluid">
+        
+        <table class="table table-bordered">
+            
+            <thead>
+
+                <tr class="table-active">
+                    <td>#</td>
+                    <td>Ürün</td>
+                    <td>Stok</td>
+                    <td>Fiyat</td>
+                    <td>Tedarikci</td>
+                    <td>AlisTarihi</td>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Adi</td>
+                        <td>@item.Stok</td>
+                        <td>@item.Fiyat</td>
+                        <td>@item.TedarikciAdiSoyadi</td>
+                        <td>@item.AlisTarihi</td>
+                    </tr>
+                }
+            
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Razor Kullanma Biçimleri:
+         1) Kod bloklarına göre yazmak
+         2) Birden fazla kod bloğu varsa tek tek yazmak yerine tek bir kod bloğu açıp içine yazmak
+    -->
+    
+    <div>
+        <!-- 1) Kod bloklarına göre yazmak: -->
+        <h5> Kod bloklarına göre C# kodunu HTML içinde yazmak </h5>
+        <ul>
+            @for (int i = 0; i < 5; i++)
+            {
+                <li> @(i + 1)-listesi </li>
+            }
+        </ul>
+       
+        <hr />
+
+        <table class="table table-bordered">
+            
+            <thead>
+
+                <tr>
+                    <td>#</td>
+                    <td>Adı</td>
+                    <td>Soyadı</td>
+                    <td>Telefon</td>
+                    <td>Adres</td>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @for (int i = 0; i < 5; i++)
+                {
+                    string[] isimler = { "Selim", "Ayşe", "Mehmet", "Fatma", "Ahmet" };
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@isimler[i]</td>
+                        <td>Kalaylı</td>
+                        <td>0544 444 33 22</td>
+                        <td>Kartal İstanbul</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+        <!-- 2) Birden fazla kod bloğu varsa tek tek yazmak yerine tek bir kod bloğu açıp içine yazmak: -->
+        <h5> Çoklu C# kodunu HTML içinde yazmak </h5>
+
+        @{
+            for (int i = 0; i < 5; i++)
+            {
+                int x = i + 1;
+                <li> @(i + 1)-listesi </li>
+
+            }
+
+            if (true)
+            {
+                    
+            }
+
+            int[] sayilar = { 1, 2, 3, 4, 5 };
+
+            <div>
+                
+                @if (sayilar[0] == 1)
+                {
+                        
+                }
+
+                @{
+                    switch (sayilar)
+                        {
+                            default:
+                            break;
+                        }
+                }
+                
+            </div>
+
+            double[] fiyatlar = { 10.5, 20.5, 30.5, 40.5, 50.5 };
+
+            }
+
+        <a></a>
+
+        @* @if (true)
+            {
+                
+            }
+        else if (true)
+            {
+                
+            }
+        else
+            {
+                
+            } *@
+
+    </div>
+</body>
+</html>
