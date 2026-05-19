@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Ders1_1_MVC/Ders1_1_MVC.csproj" />
   <Project Path="Ders2_MVC_Razor/Ders2_MVC_Razor.csproj" />
+  <Project Path="Ders3_1_Layout/Ders3_1_Layout.csproj" Id="f8f52840-9131-4adc-98e1-05df4251e0b8" />
 </Solution>
