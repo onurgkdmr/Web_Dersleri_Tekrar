@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace Ders4_1_BLL.Servis;
 
-internal class UrunServis
+public class UrunServis
 {
     public string UrunEkle(string name, int stok, decimal fiyat)
     {
