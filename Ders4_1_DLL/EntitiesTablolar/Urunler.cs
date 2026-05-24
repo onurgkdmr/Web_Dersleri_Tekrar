@@ -7,5 +7,6 @@ public class Urunler
     public int Stok { get; set; }
     public decimal Fiyat { get; set; }
     public string Aciklama { get; set; }
+    public DateTime EklemeTarihi { get; set; }
 
 }

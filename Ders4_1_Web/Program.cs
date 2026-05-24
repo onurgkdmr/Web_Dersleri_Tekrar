@@ -1,3 +1,7 @@
+using Ders4_1_BLL.Servis;
+using Ders4_1_DLL;
+using Ders4_1_DLL.EntitiesTablolar;
+
 namespace Ders4_1_Web
 {
     public class Program
@@ -8,6 +12,13 @@ namespace Ders4_1_Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<Urunler>();
+            builder.Services.AddScoped<UrunServis>();
+
+            builder.Services.AddSqlServer<HepsiNerdeDB>(builder.Configuration.GetConnectionString("HepsiNerdeDBAdres"));
+
+            // HepsiNerdeDBAdres => appsettings.json dosyasında tanımlanan bağlantı dizesinin adıdır. Bu ad, veritabanına bağlanmak için gerekli olan bilgileri içerir (örneğin sunucu adı, veritabanı adı, kullanıcı adı, şifre vb.). Bu bağlantı dizesi, Entity Framework Core'un HepsiNerdeDB bağlamını yapılandırmak için kullanılır ve veritabanına erişim sağlar.
 
             var app = builder.Build();
 
